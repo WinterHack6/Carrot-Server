@@ -23,6 +23,9 @@ import javax.persistence.*;
         allocationSize = 50
 )
 public class Member extends BaseTimeEntity {
+    /**
+     * PK를 SEQUENCE 전략으로 설정
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "MEMBER_SEQ_GENERATOR")
     private Long id;
