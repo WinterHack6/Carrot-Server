@@ -3,6 +3,9 @@
 name: carror-market-deploy-system
 
 on:
+  push:
+    branches:
+      - develop
   workflow_dispatch:
 
 env: 
