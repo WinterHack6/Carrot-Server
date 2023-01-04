@@ -1,6 +1,7 @@
 package carrot.market.Item.domain;
 
 import carrot.market.category.domain.Category;
+import carrot.market.member.domain.Member;
 import carrot.market.model.BaseTimeEntity;
 import carrot.market.model.Status;
 import lombok.AccessLevel;
@@ -23,6 +24,10 @@ public class Item extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ITEM_SEQ_GENERATOR")
     private Long id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="member_id", nullable = false, foreignKey = @ForeignKey(name="fk_item_member"))
+    private Member member;
 
     @Column(nullable = false)
     private String title;
