@@ -62,7 +62,8 @@ public class Item extends BaseTimeEntity {
     }
 
     @Builder
-    public Item(String title, Integer price, String content, Boolean isShare, Boolean isPriceOffer, Category category, String hopePlace) {
+    public Item(Member member, String title, Integer price, String content, Boolean isShare, Boolean isPriceOffer, Category category, String hopePlace) {
+        this.member = member;
         this.title = title;
         this.price = price;
         this.content = content;
