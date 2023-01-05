@@ -41,5 +41,6 @@ public class TownEtc extends BaseTimeEntity {
     public TownEtc(Town town, String etc) {
         this.town = town;
         this.etc = etc;
+        this.status = Status.ACTIVE;
     }
 }
