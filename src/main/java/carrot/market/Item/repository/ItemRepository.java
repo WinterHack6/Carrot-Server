@@ -3,6 +3,8 @@ package carrot.market.Item.repository;
 import carrot.market.Item.domain.Item;
 import carrot.market.model.Status;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import java.util.Optional;
 
