@@ -4,6 +4,7 @@ import carrot.market.Item.dto.ItemCreateRequestDto;
 import carrot.market.Item.service.ItemService;
 import carrot.market.model.response.Response;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -28,6 +29,7 @@ public class ItemController {
 
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
+    @ApiImplicitParam(name = "id", value = "게시글 id", required = true)
     public Response read(@PathVariable Long id) {
         return Response.success(itemService.read(id));
     }
